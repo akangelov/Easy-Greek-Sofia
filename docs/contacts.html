@@ -35,16 +35,18 @@
             </nav> 
         </header>
 
-        <main>
+        <script type="text/javascript" src="app.js"></script>
+
+<main>
 
     <section class="form-wrapper">
-        <form class="form">
+        <form class="form" onsubmit="return false">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" placeholder="Your name" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Your email" required>
+            <input type="email" name="email" id="email" placeholder="Your email" >
             <label for="telephone">Telephone</label>
-            <input type="tel" name="Telephone" id="telephone" placeholder="Telephone" required>
+            <input type="tel" name="telephone" id="telephone" placeholder="Telephone" >
             <label for="find-us">How did you find me?</label>
             <select name="find-us" id="find-us">
                 <option value="friends" selected>Friends</option>
@@ -55,7 +57,7 @@
             <label>Your Message</label>
             <textarea name="message" placeholder="Your message"></textarea>
             <label>&nbsp;</label>
-            <button class="button-basic">Submit</button>
+            <button class="button-basic" onclick="myFunction()">Submit</button>
         </form>
     </section>
 
