@@ -1,0 +1,40 @@
+.site-footer {
+    @include bp('mobile'){
+        display: block;
+    }
+    background-color: #333;
+    padding: 3em;
+    font-size: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-nav, .social-links, li {
+    display: flex;
+    list-style: none;
+    margin:1em;    
+    a {
+        color:#888;
+        transition: color 0.5s; 
+        &:hover {
+            color: white;
+        }                      
+    }     
+}
+
+footer i {
+    font-size: 2em;
+    padding: 0.2em;
+    transition: color 0.5s;
+    }       
+
+.fa-facebook:hover {color:blue}
+.fa-twitter:hover {color: rgb(0, 225, 255) }
+.fa-instagram:hover {color:rgb(255, 0, 85)}
+
+  
+
+
+    

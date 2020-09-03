@@ -1,0 +1,28 @@
+title: CSS Advanced
+email: ang.k.angelov@gmail.com
+description: Hi there!
+destination: docs
+baseurl: "/My Project"
+url: ""
+twitter_username: akangelov
+github_username: akangelov
+
+# Build settings
+markdown: kramdown
+# plugins:
+#   - jekyll-feed
+
+exclude:
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - theme-personal

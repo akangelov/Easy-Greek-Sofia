@@ -1,0 +1,21 @@
+.site {
+    max-width: 1440px;
+    margin: 2em auto;
+    @include bp('mobile'){
+        padding: 0 2em;   
+    }
+}
+
+header, section, article {
+    margin-bottom: 3em;
+    @include bp('mobile') {margin-bottom: 1em;}
+}
+
+
+
+
+
+
+
+
+

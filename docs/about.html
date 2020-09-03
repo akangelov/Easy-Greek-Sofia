@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://kit.fontawesome.com/b9c1ee92c4.js" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', (event) => {
+        document.querySelector('body').classList.add('loaded');
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="site">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <header class="site-header">           
+            <img class="logo" src="content/Logo.jpg" alt="logo">
+            <label for="nav-toggle" class="nav-toggle-label">
+                    <span class="close">Menu</span>
+                    <span class="open">Close</span>
+            </label>
+            <nav class="class-nav">
+                <ul>
+                    <li><a class="header" href="about.html"><i class="fas fa-id-badge"></i>About</a></li>
+                    <li><a class="header" href="index.html"><i class="fas fa-chalkboard"></i>Why Greek</a></li>                    
+                    <li><a class="header" href="services.html"><i class="fas fa-briefcase"></i>Services</a></li>
+                    <li><a class="header" href="contacts.html"><i class="fas fa-phone-square-alt"></i>Contacts</a></li>
+                </ul>
+            </nav> 
+        </header>
+
+        <main>
+
+    <article class="about">
+        <div class="media">
+            <img src="content/Sofia.jpg" alt="img">                    
+        </div>
+        <div class="text onload">
+                <p> Hi, my name is Angel. I am from Sofia, Bulgaria.</p>
+        </div>
+    </article> 
+
+    <article class="about">
+        <div class="media">
+            <img src="content/Parthenon.jpg" alt="img">                    
+        </div>
+        <div class="text onload">
+                <p> I have graduated with honors from a Greek university and speak Greek on a native level.</p>
+        </div>
+    </article> 
+
+    <article class="about">
+        <div class="media">
+            <img src="content/Learning.jpg" alt="img">                    
+        </div>
+        <div class="text onscroll">
+                <p> I have a passion for languages and have been teaching Greek for couple of years now.</p>
+        </div>
+    </article>
+
+    <article class="about">
+        <div class="media">
+            <img src="content/Success.jpg" alt="img">                    
+        </div>
+        <div class="text onscroll">
+                <p> No matter your learning goal, I can help you with that!</p>
+        </div>
+    </article>
+    
+</main>
+
+
+        
+        
+
+    </div>
+    
+        <footer class="site-footer">
+            <ul class="footer-nav">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="index.html">Why Greek</a></li>
+                <li><a href="services.html">Services</a></li>  
+                <li><a href="contacts.html">Contacts</a></li>              
+            </ul>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            </ul>
+        </footer> 
+
+        <script>
+            var $window = $(window);
+            var $elem = $(".onscroll")
+            
+                function isScrolledIntoView($elem, $window) {
+                    var docViewTop = $window.scrollTop();
+                    var docViewBottom = docViewTop + $window.height();
+            
+                    var elemTop = $elem.offset().top;
+                    var elemBottom = elemTop + $elem.height();
+            
+                    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                }
+            
+            
+            $(document).on("scroll", function () {
+                if (isScrolledIntoView($elem, $window)) {
+                    $elem.addClass("animate")
+                }
+            }); 
+            </script>  
+
+</body>
+</html>
+

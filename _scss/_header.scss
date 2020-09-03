@@ -1,0 +1,97 @@
+// LAYOUT HEADER
+
+header {
+    @include bp('desktop') {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;   
+    }
+}
+
+// LOGO
+
+.logo {
+    width: 120px;
+    height: 120px;
+    @include bp('desktop') {
+        width: 150px;
+        height: 150px;
+    }
+} 
+
+// NAVIGATION
+
+nav {
+    padding-top: 0.5em;
+    @include bp(mobile) {
+        display:none;
+        }
+       
+    ul {
+        padding: 0;
+        margin: 0;
+        display: block;
+        list-style-type: none;
+        @include bp('desktop') {
+            display: flex;
+        } 
+
+        li {
+            margin: 0 0.3em;
+            }
+        }
+    }
+
+header i {padding: 0.3em;}
+
+.site-header a  {
+    @include bp('mobile'){
+        width:100%;
+        margin-bottom: 0.3em;
+        font-size: 16px;
+    }  
+    padding: 1em 0.8em;
+    background:#EEE;
+    color: $greek-blue;
+    border:2px solid $greek-blue;
+    border-radius: 0.8em;  
+    font-weight: 600; 
+    transition: color 0.5s;
+    &:hover {
+        color:black;
+        }
+    }
+
+.nav-toggle {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    &-label {
+        @include bp('desktop') {
+            display: none;
+        }
+    }
+}
+
+.nav-toggle:checked + header nav {
+    @include bp(mobile) {
+        display:block;
+    } 
+}
+
+.nav-toggle-label {
+    @include bp(desktop) {
+        display: none;
+    }
+    display: flex;
+    padding: 1em 0.8em;
+    background-color: #090;
+    font-size: 16px;
+    color: blue;
+    font-weight: 600;
+    border-radius: 0.8em;
+}
+
+.nav-toggle + header .open {display: none;}
+.nav-toggle:checked + header .close {display: none;}
+.nav-toggle:checked + header .open {display: block;}

@@ -1,0 +1,66 @@
+//ANIMATIONS PER PAGE
+
+
+//ABOUT && SERVICES
+
+@include bp('desktop') {
+
+.onscroll {opacity: 0;}
+
+.onscroll.animate {
+    animation: text-focus-in 1s ease-in both;
+}
+
+@keyframes text-focus-in {
+  0% {
+      filter: blur(12px);
+      opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.onload {
+    opacity:0;
+    filter: blur(12px);
+    transition: opacity 1s ease-in, filter 1s;
+}
+
+.loaded .onload {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+
+//WHY GREEK 
+
+.why-greek li {
+    font-weight: 600;
+    transform: translate(-5em, 0);
+    opacity: 0;
+    transition: opacity 0.4s ease-in, transform 0.5s;
+}
+
+.loaded ul li {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+ul li:nth-child(1) { transition-delay: 0.2s;}
+ul li:nth-child(2) { transition-delay: 0.4s;}
+ul li:nth-child(3) { transition-delay: 0.6s;}
+ul li:nth-child(4) { transition-delay: 0.8s;}
+ul li:nth-child(5) { transition-delay: 1s;}
+
+}
+
+
+
+      
+
+
+
+
+

@@ -1,0 +1,102 @@
+
+//SECTION - WHY GREEK
+
+.why-greek-wrapper {
+    padding: 1em;
+    border: 2px solid $greek-blue;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px;
+        & i {
+            color: $greek-blue;
+            padding: 0.2em;
+        }
+}
+
+//SECTION - BEAUTY OF GREECE GALLERY
+
+.wrapper-gallery {
+    @include bp('desktop') {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2em;  
+        .figure-1, .figure-6 {grid-column: span 2;}
+    } 
+
+    @include bp('mobile') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5em;
+        .figure-1, .figure-6 {grid-column: span 2;}  
+    }
+
+        & .img-greece { 
+            @include bp('desktop') {
+                max-width: 100%;
+                height: 100%;
+                opacity: 0.8;
+                transition: transform 1s, opacity 1s;
+            } 
+            @include bp('mobile') {
+                max-width: 100%;    
+                height: auto;
+            }  
+            width: 90vw;
+            border-radius: 10px; 
+            border:1.5px solid $greek-blue;   
+            box-shadow: 5px 5px 12px 10px;    
+
+                &:hover {
+                    @include bp('desktop') {
+                        opacity: 1;
+                        transform: scale(1.1, 1.10);
+                    }
+                }          
+        }    
+}
+
+@include bp('desktop') {
+    .figure-1 .img-greece:hover {transform: scale(1.07, 1.1)}
+    .figure-6 .img-greece:hover {transform: scale(1.07, 1.12)}
+}
+
+//CLIENT TESTIMONIALS
+
+.testimonials-wrapper {
+    @include bp('desktop') {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include bp('mobile') {height: 38em;}
+        
+    display: block;
+    height: 32em;   
+    padding-top: 1em;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)) ,url(https://images.unsplash.com/photo-1518463892881-d587bf2c296a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80);
+    background-position: center;  
+    background-size: cover;
+    background-attachment: fixed; 
+        & blockquote {
+            font-family: Verdana;
+            font-style: italic;
+            line-height: 1.7;
+            margin: 1em; 
+            color: white;
+            cite {
+                margin-top: 1em;
+                @include bp('desktop') {
+                    display: block;
+                }        
+            }
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 0.2em;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+        }
+}
+

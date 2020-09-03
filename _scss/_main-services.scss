@@ -1,0 +1,177 @@
+//PRICE PLANS
+
+.wrapper-price-plans {
+    @include bp('desktop') {
+        display: flex;
+        justify-content: space-between;
+    }
+    display: block;
+    // background: #eee;
+        
+        & .column-1, .column-2, .column-3 {
+              @include bp('desktop') {
+                  width: 30%;
+              }
+              @include bp('mobile') {
+                  margin-bottom: 1.5em;
+              }
+              border: 1px solid $greek-blue;
+              box-shadow: 3px 1px 10px;
+              border-radius: 10px;       
+        }
+}
+
+.price-plan {
+    @include bp("mobile") {
+        height: 16em;
+    }
+    height: 12em;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 1em;
+    border-bottom: 1px solid $greek-blue;   
+    
+        & p {
+            font-style: italic;
+            padding: 0.5em 0;
+        }
+
+        & .price {
+            font-size: 21px;
+            font-weight: 600;
+            color: $greek-blue;      
+        }
+
+        @include bp("desktop") {    
+            p.ind {padding-top: 2.8em;}
+        }
+}
+
+.list {
+    height: 8.7em; 
+    border-bottom: 1px solid $greek-blue;
+    text-align: justify;
+    @include bp("mobile") {height: 11em;}
+
+        & ul {font-weight: 600;}
+        
+        & i {
+              color: $greek-blue;  
+              padding: 0.2em;
+        }   
+}
+
+.action {
+    @include bp('mobile') {
+        margin-bottom: 1.5em;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+        
+        button.call {width: 5em;}
+}
+
+
+//ADDITIONAL SERVICES
+
+.grid-container {
+    display: block;
+    padding-bottom: 0;
+    @include bp('desktop') {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+        & div {
+            border-radius: 50%;
+            background-color: #eee;
+            border: 2px solid $greek-blue;
+            @include bp('mobile') {
+                margin-bottom: 1em;
+                margin-left: auto;
+                margin-right: auto;
+            }  
+        }
+        
+            & p { 
+                line-height: 18px;
+                font-size: 18px; 
+                text-align: center;
+                font-weight: 500;
+                font-style: italic;
+            }
+}
+
+.item-3-center {
+    width: 18em;
+    height: 18em;
+  
+        & p {         
+            font-weight: 600;
+            padding-top: 6em;
+            font-size: 25px; 
+            @include bp('mobile') { padding-top: 5em;}        
+        }  
+}
+
+.item-1, .item-2, .item-4, .item-5 {
+  width: 16em;
+  height: 16em; 
+
+      & p {
+        padding-top: 6.5em;
+        font-size: 20px;
+        cursor: pointer;
+      }
+}
+
+.item-1, .item-2, .item-4, .item-5 {
+      
+      & p {
+      @include bp('mobile') {
+          padding-top: 6em;
+          font-size: 15px;
+          font-weight: 600;
+      }
+    }   
+}
+
+.item-2 {
+  grid-column: 3; 
+}
+
+.item-3-center {
+  grid-column: 2; 
+  grid-row: first-line / 2;
+}
+
+.item-4 {
+  grid-column: 1; 
+  grid-row: second-line / 3;
+}
+
+.item-5 {
+  grid-column: 3; 
+  grid-row: second-line / 3;
+}
+
+.item-1, .item-4 {
+  justify-self: end;
+}
+
+.item-3-center {
+  justify-self: center;
+}
+
+
+
+
+
+
+

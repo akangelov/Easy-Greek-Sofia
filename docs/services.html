@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://kit.fontawesome.com/b9c1ee92c4.js" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', (event) => {
+        document.querySelector('body').classList.add('loaded');
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="site">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <header class="site-header">           
+            <img class="logo" src="content/Logo.jpg" alt="logo">
+            <label for="nav-toggle" class="nav-toggle-label">
+                    <span class="close">Menu</span>
+                    <span class="open">Close</span>
+            </label>
+            <nav class="class-nav">
+                <ul>
+                    <li><a class="header" href="about.html"><i class="fas fa-id-badge"></i>About</a></li>
+                    <li><a class="header" href="index.html"><i class="fas fa-chalkboard"></i>Why Greek</a></li>                    
+                    <li><a class="header" href="services.html"><i class="fas fa-briefcase"></i>Services</a></li>
+                    <li><a class="header" href="contacts.html"><i class="fas fa-phone-square-alt"></i>Contacts</a></li>
+                </ul>
+            </nav> 
+        </header>
+
+        <main>
+
+    <section class="wrapper-price-plans">
+        
+        <div class="column-1">
+        
+            <div class="price-plan">
+                <h3>Full Course – From zero to hero!</h3>
+                <p class="full"><span class="price">300 lv</span> /month</p>
+                <p>That`s 33 lv per lesson, you save 40%!</p>
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li><i class="fas fa-check"></i>3 Lessons per week for 3 months</li>
+                    <li><i class="fas fa-check"></i>Free learning materials </li>
+                    <li><i class="fas fa-check"></i>Flexible scheduling </li>
+                </ul>
+            </div>
+        
+            <div class="action"><button class="button-basic call"> Call</button></div>
+               
+        </div>
+
+        <div class="column-2">
+
+            <div class="price-plan">
+                <h3>Half Course – quick fix for your Greek!</h3>
+                <p class="mid"><span class="price">200 lv</span>/month</p>
+                <p>That`s 40 lv per lesson, you save 25%!</p>
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li><i class="fas fa-check"></i>Free learning materials </li>
+                    <li><i class="fas fa-check"></i>2 Lessons per week for 1 month </li>
+                    <li><i class="fas fa-check"></i>Flexible scheduling </li>
+                </ul>
+            </div>
+
+            <div class="action"><button class="button-basic call"> Call</button></div>
+
+        </div>
+
+        <div class="column-3">
+
+            <div class="price-plan">
+                <h3>Individual lesson</h3>
+                <p class="ind"><span class="price">50 lv</span>/lesson</p>
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li><i class="fas fa-check"></i>Individual 1,5 hour lesson accustomed to your schedule</li>
+                    <li><i class="fas fa-check"></i>Free learning materials</li>
+                    <li><i class="fas fa-check"></i>Flexible scheduling </li>
+                </ul>
+            </div>
+            
+            <div class="action"><button class="button-basic call"> Call</button></div>
+
+        </div>
+
+    </div>
+
+    </section>
+
+    <section class="grid-container">
+
+        <div class="item-3-center onscroll">
+            <p>Additional Services</p>
+        </div>
+
+        <div class="item-1 onscroll">
+            <p>Written translation and drafting of documents, emails, contracts in and from Greek</p>
+        </div>
+
+        <div class="item-2 onscroll">
+            <p>Oral translation by business meeting and conferences</p>
+        </div>
+
+        <div class="item-4 onscroll">
+            <p>Assistance by the purchase of your dream vacation or rental property</p>
+        </div>
+        
+        <div class="item-5 onscroll">
+            <p>For any other request do not hesitate to drop me line in the contact form!</p>
+        </div>
+
+    </section>
+
+</main>
+
+    </div>
+    
+        <footer class="site-footer">
+            <ul class="footer-nav">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="index.html">Why Greek</a></li>
+                <li><a href="services.html">Services</a></li>  
+                <li><a href="contacts.html">Contacts</a></li>              
+            </ul>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            </ul>
+        </footer> 
+
+        <script>
+            var $window = $(window);
+            var $elem = $(".onscroll")
+            
+                function isScrolledIntoView($elem, $window) {
+                    var docViewTop = $window.scrollTop();
+                    var docViewBottom = docViewTop + $window.height();
+            
+                    var elemTop = $elem.offset().top;
+                    var elemBottom = elemTop + $elem.height();
+            
+                    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                }
+            
+            
+            $(document).on("scroll", function () {
+                if (isScrolledIntoView($elem, $window)) {
+                    $elem.addClass("animate")
+                }
+            }); 
+            </script>  
+
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://kit.fontawesome.com/b9c1ee92c4.js" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', (event) => {
+        document.querySelector('body').classList.add('loaded');
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="site">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <header class="site-header">           
+            <img class="logo" src="content/Logo.jpg" alt="logo">
+            <label for="nav-toggle" class="nav-toggle-label">
+                    <span class="close">Menu</span>
+                    <span class="open">Close</span>
+            </label>
+            <nav class="class-nav">
+                <ul>
+                    <li><a class="header" href="about.html"><i class="fas fa-id-badge"></i>About</a></li>
+                    <li><a class="header" href="index.html"><i class="fas fa-chalkboard"></i>Why Greek</a></li>                    
+                    <li><a class="header" href="services.html"><i class="fas fa-briefcase"></i>Services</a></li>
+                    <li><a class="header" href="contacts.html"><i class="fas fa-phone-square-alt"></i>Contacts</a></li>
+                </ul>
+            </nav> 
+        </header>
+
+        <main>
+
+    <section class="form-wrapper">
+        <form class="form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+            <label for="telephone">Telephone</label>
+            <input type="tel" name="Telephone" id="telephone" placeholder="Telephone" required>
+            <label for="find-us">How did you find me?</label>
+            <select name="find-us" id="find-us">
+                <option value="friends" selected>Friends</option>
+                <option value="search">Search engine</option>
+                <option value="ad">Advertisement</option>
+                <option value="other">Other</option>
+            </select>                            
+            <label>Your Message</label>
+            <textarea name="message" placeholder="Your message"></textarea>
+            <label>&nbsp;</label>
+            <button class="button-basic">Submit</button>
+        </form>
+    </section>
+
+    <h3 style="padding: 0">You can find me here!</h2>
+
+    <section class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13951.155894585743!2d23.320248605672212!3d42.685311994834684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa850fb6af8ebb%3A0x87a301b7860955b9!2z0J3QsNGG0LjQvtC90LDQu9C10L0g0LTQstC-0YDQtdGGINC90LAg0LrRg9C70YLRg9GA0LDRgtCw!5e0!3m2!1sbg!2sbg!4v1574616273914!5m2!1sbg!2sbg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </section>
+    
+</main>
+
+
+    </div>
+    
+        <footer class="site-footer">
+            <ul class="footer-nav">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="index.html">Why Greek</a></li>
+                <li><a href="services.html">Services</a></li>  
+                <li><a href="contacts.html">Contacts</a></li>              
+            </ul>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            </ul>
+        </footer> 
+
+        <script>
+            var $window = $(window);
+            var $elem = $(".onscroll")
+            
+                function isScrolledIntoView($elem, $window) {
+                    var docViewTop = $window.scrollTop();
+                    var docViewBottom = docViewTop + $window.height();
+            
+                    var elemTop = $elem.offset().top;
+                    var elemBottom = elemTop + $elem.height();
+            
+                    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                }
+            
+            
+            $(document).on("scroll", function () {
+                if (isScrolledIntoView($elem, $window)) {
+                    $elem.addClass("animate")
+                }
+            }); 
+            </script>  
+
+</body>
+</html>
+
