@@ -1,8 +1,8 @@
 #### Easy-Greek-Sofia is a personal website offering language learning services.
 
-##### The design is mobile and tablet resposive.
+###### The design is mobile and tablet resposive.
 
-##### The website is built using the following technologies:
+###### The website is built using the following technologies:
 
 > - Jekyll templating engine
 > - SASS, Gulp
