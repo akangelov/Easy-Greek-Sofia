@@ -1,4 +1,4 @@
-#### Easy-Greek-Sofia is a personal website offering language learning services.
+#### Easy-Greek-Sofia is a website offering language learning services.
 
  **The design is mobile and tablet resposive**.
 
