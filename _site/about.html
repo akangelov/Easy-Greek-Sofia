@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+    <div class="site">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <header class="site-header">           
+            <img class="logo" src="content/Logo cropped.png" alt="logo">
+            <label for="nav-toggle" class="nav-toggle-label">
+                    <span class="close">Menu</span>
+                    <span class="open">Close</span>
+            </label>
+            <nav class="class-nav">
+                <ul>
+                    <li><a class="header" href="about.html"><i class="fas fa-id-badge"></i>About</a></li>
+                    <li><a class="header" href="index.html"><i class="fas fa-chalkboard"></i>Why Greek</a></li>                    
+                    <li><a class="header" href="services.html"><i class="fas fa-briefcase"></i>Services</a></li>
+                    <li><a class="header" href="contacts.html"><i class="fas fa-phone-square-alt"></i>Contacts</a></li>
+                </ul>
+            </nav> 
+        </header>
+
+                <main>           
+            <article class="about">
+                <div class="media">
+                    <img src="content/Sofia.jpg" alt="img">                    
+                </div>
+                <div class="text">
+                        <p> Hi, my name is Angel. I am from Sofia, Bulgaria.</p>
+                </div>
+            </article>  
+
+            <article class="about">
+                <div class="media">
+                    <img src="https://images.unsplash.com/photo-1503152394-c571994fd383?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80" alt="img">                    
+                </div>
+                <div class="text">
+                        <p> I have graduated with honors from a Greek university and speak Greek on a native level.</p>
+                </div>
+            </article>  
+
+            <article class="about">
+                <div class="media">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="img">                    
+                </div>
+                <div class="text">
+                        <p> I have a passion for languages and have been teaching Greek for couple of years now.</p>
+                </div>
+            </article> 
+            
+            <article class="about">
+                <div class="media">
+                    <img src="https://images.unsplash.com/photo-1497561813398-8fcc7a37b567?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="img">                    
+                </div>
+                <div class="text">
+                        <p> No matter your learning goal, I can help you with that!</p>
+                </div>
+            </article>
+              
+        </main>
+        
+        
+
+        <footer class="site-footer">
+            <ul class="footer-nav">
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">News</a></li>               
+            </ul>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script src="https://kit.fontawesome.com/b9c1ee92c4.js" crossorigin="anonymous"></script>
+<script>
+    window.addEventListener('load', (event) => {
+        document.querySelector('body').classList.add('loaded');
+    });
+</script>
